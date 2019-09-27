@@ -7,4 +7,4 @@ Quick scripts to build software from source
 - 1.13.1-amd64
 
 ### Bettercap
-- Current
+- Latest
