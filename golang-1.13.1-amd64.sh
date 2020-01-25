@@ -5,15 +5,20 @@
 
 # grab from google, unzip and move
 cd /tmp
-wget https://dl.google.com/go/go1.13.1.linux-armv6l.tar.gz
-sudo tar -xvf go1.13.1.linux-amd64.tar.gz
-sudo mv go /usr/local
+curl https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz -O
+sudo tar -xvf /tmp/go1.13.1.linux-amd64.tar.gz
+sudo mv /tmp/go /usr/local
 
 # set up go environment, change these if needed
-echo "\nexport GOROOT=/usr/local/go" >> $HOME/.bashrc
-echo "\nexport GOPATH=$HOME/" >> $HOME/.bashrc
-echo "\nexport PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> $HOME/.bashrc
+printf "\n GO ENV"
+printf "\nexport GOROOT=/usr/local/go" >> $HOME/.bashrc
+printf "\nexport GOPATH=\$HOME/" >> $HOME/.bashrc
+printf "\nexport PATH=\$GOPATH/bin:\$GOROOT/bin:\$PATH" >> $HOME/.bashrc
+printf "\n"
+
+# source bashrc
+source $HOME/.bashrc
 
 # verify installation
-echo go version
-echo go env
+echo $(go version)
+echo $(go env)
