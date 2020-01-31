@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Assumes you're using bash, if zsh or something else,
+# Assumes you're using zsh, if something else,
 # change shebang and profile exports in environment section
 
 # grab from google, unzip and move
@@ -11,13 +11,13 @@ sudo mv /tmp/go /usr/local
 
 # set up go environment, change these if needed
 printf "\n GO ENV"
-printf "\nexport GOROOT=/usr/local/go" >> $HOME/.bashrc
-printf "\nexport GOPATH=\$HOME/" >> $HOME/.bashrc
-printf "\nexport PATH=\$GOPATH/bin:\$GOROOT/bin:\$PATH" >> $HOME/.bashrc
-printf "\n"
+printf "\nexport GOROOT=/usr/local/go" >> $HOME/.zshrc
+printf "\nexport GOPATH=\$HOME/" >> $HOME/.zshrc
+printf "\nexport PATH=\$GOPATH/bin:\$GOROOT/bin:\$PATH" >> $HOME/.zshrc
+printf "\n\n"
 
 # source bashrc
-source $HOME/.bashrc
+source $HOME/.zshrc
 
 # verify installation
 echo $(go version)
