@@ -24,7 +24,7 @@ if [ "$GOLANG_INSTALL" == "y" ]; then
 
     cd /opt/build-scripts && chmod +x *
 
-    bash golang-1.13.6-amd64.sh >> /var/log/linode/setup.log
+    bash golang-1.14.2-amd64.sh >> /var/log/linode/setup.log
 
 fi
 
