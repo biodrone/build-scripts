@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # <UDF name="GOLANG_INSTALL" Label="Install GO?" default="n" example="y/n" />
+# <UDF name="HOSTNAME" Label="Hostname of New Server?" default="localhost" example="new-linode-vps" />
 
 #Install Dotfiles
 
