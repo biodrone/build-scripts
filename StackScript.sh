@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # <UDF name="GOLANG_INSTALL" Label="Install GO?" default="n" example="y/n" />
+# <UDF name="HOSTNAME" Label="Hostname of New Server?" default="localhost" example="new-linode-vps" />
 
 #Install Dotfiles
 
@@ -25,6 +26,17 @@ if [ "$GOLANG_INSTALL" == "y" ]; then
     cd /opt/build-scripts && chmod +x *
 
     bash golang-1.14.2-amd64.sh >> /var/log/linode/setup.log
+
+fi
+
+# Check if hostname change is required
+
+if [ "$HOSTNAME" != "localhost" ]; then
+    echo "Changing Hostname to $HOSTNAME" >> /var/log/linode/setup.log
+
+    sed -i "s/localhost/$HOSTNAME/g" /etc/hostname
+
+    sed -i "s/localhost/localhost\n127.0.1.1\t$HOSTNAME\n/g" /etc/hosts
 
 fi
 
