@@ -5,8 +5,8 @@
 
 # grab from google, unzip and move
 cd /tmp
-curl https://dl.google.com/go/go1.13.6.linux-amd64.tar.gz -O
-sudo tar -xvf /tmp/go1.13.6.linux-amd64.tar.gz
+curl https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O
+sudo tar -xvf /tmp/go1.14.2.linux-amd64.tar.gz
 sudo mv /tmp/go /usr/local
 
 # set up go environment, change these if needed

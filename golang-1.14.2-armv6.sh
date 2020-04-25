@@ -5,8 +5,8 @@
 
 # grab from google, unzip and move
 cd /tmp
-wget https://dl.google.com/go/go1.13.1.linux-armv6l.tar.gz
-sudo tar -xvf go1.13.1.linux-armv6l.tar.gz
+wget https://dl.google.com/go/go1.14.2.linux-armv6l.tar.gz
+sudo tar -xvf go1.14.2.linux-armv6l.tar.gz
 sudo mv go /usr/local
 
 # set up go environment, change these if needed
