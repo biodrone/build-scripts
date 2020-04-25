@@ -29,6 +29,17 @@ if [ "$GOLANG_INSTALL" == "y" ]; then
 
 fi
 
+# Check if hostname change is required
+
+if [ "$HOSTNAME" != "localhost" ]; then
+    echo "Changing Hostname to $HOSTNAME" >> /var/log/linode/setup.log
+
+    sed -i "s/localhost/$HOSTNAME/g" /etc/hostname
+
+    sed -i "s/localhost/localhost\n127.0.1.1\t$HOSTNAME\n/g" /etc/hosts
+
+fi
+
 #Cleanup Build Scripts
 
 rm -R /opt/build-scripts
