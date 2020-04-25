@@ -7,7 +7,7 @@ Quick scripts to build software from source
 ### GO
 
 - 1.14.2-armv6
-- 1.12.2-amd64
+- 1.14.2-amd64
 
 ### Bettercap
 
